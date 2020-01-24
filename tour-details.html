@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tours privados a lo largo de todo Chile">
+    <meta name="author" content="Carlos Guzmán">
+
+    <title>PrivaTour</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--Datepicker-->
+    <link href="css/datepicker.css" rel="stylesheet">
+    <!-- Animate CSS -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!--Fancybox-->
+    <link href="css/jquery.fancybox.css" rel="stylesheet">
+    <!-- font-awesome-->
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    <!--Owl Carousel-->
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <!--Google Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500,700' rel='stylesheet'
+          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300italic,400italic,700' rel='stylesheet'
+          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+    <!-- Main CSS -->
+    <link href="style.css" rel="stylesheet">
+    <!-- Color switcher -->
+    <link rel="stylesheet" href="css/skin/switcher.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top">
+
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="index.html"><img src="img/logo-privatour.png" alt="Logo"
+                                                                               width="120"/></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active">
+                            <a class="page-scroll" href="./#page-top">Inicio</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="./#packages">Paquetes</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="./#services">Servicios</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="./#hot-deals">Ofertas</a>
+                        </li>
+
+                        <li>
+                            <a class="page-scroll" href="./#deals-discounts">Descuentos</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="./#contact-us">Contacto</a>
+                        </li>
+                        <li>
+
+                            <div id="google_translate_element"></div>
+                            <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                            <script type="text/javascript">
+                                googleTranslateElementInit();
+                                function googleTranslateElementInit() {
+                                    new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'de,en,fr,pt,zh-TW', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                                }
+                            </script>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Title-->
+<section id="page-title" class="parallax" data-stellar-background-ratio="0.5"
+         style="background-image: url(img/single-tour/bg.jpg);">
+    <div class="title-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="page-title text-center">
+                        <h1 id="post_title1"></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--end title-info-->
+</section>
+<!--end page-title-->
+
+<!-- Main Content -->
+<section class="main-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-md-9">
+                <div class="content-block">
+                    <div class="single_post">
+                        <div class="post_thumb" id="post_thumb">
+                        </div><!--end post thumb-->
+                        <div class="meta" style="display: none;">
+                            <span class="tour-duration"><a href="#">Próxima fecha</a></span>
+
+                            <span class="date"><a href="#">18/11/2018</a></span>
+                        </div><!--end meta-->
+
+                        <h2 id="post_title"></h2>
+
+                        <div class="post_desc">
+                            <p id="post_desc"></p>
+
+                        </div><!--end post desc-->
+
+                        <h2>ITINERARIO</h2>
+
+                        <div class="post_desc">
+                            <p id="post_itinerario"></p>
+
+                        </div><!--end post desc-->
+
+                        <h2>COMENTARIOS</h2>
+
+                        <div class="post_desc">
+                            <input type="text" class="form-control"  id="cNombre" placeholder="Ingrese su nombre"> <br>
+                            <select class="form-control" id="cValoracion">
+                                <option value="1">1 Estrella</option>
+                                <option value="2">2 Estrellas</option>
+                                <option value="3">3 Estrellas</option>
+                                <option value="4">4 Estrellas</option>
+                                <option value="5">5 Estrellas</option>
+                            </select> <br>
+
+                            <textarea class="form-control" type="text" id="cComenario" placeholder="Ingrese su comentario"></textarea><br>
+                            <button class="btn btn-primary" id="btnComentar">Comentar</button>
+                            <div id="post_comments"><br><br></div>
+
+                        </div><!--end post desc-->
+
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-4 col-md-3">
+                <div class="sidebar">
+                    <div class="sidebar-item">
+                        <h3>Reservar</h3>
+                        <form action="tour-payment.html" method="get" id="booking-form">
+                            <div class="form-group hidden">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-money"></i></span>
+                                    <input type="text" class="form-control" value="-1" id="post_price" name="precio"
+                                           >
+                                </div>
+                            </div>
+                            <div class="form-group hidden">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <input type="text" class="form-control" value="-1" id="post_id" name="id">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <input type="text" class="form-control" placeholder="Ingresa tu nombre" name="name"
+                                           required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <input type="text" class="form-control" placeholder="Ingresa tu apellido" name="lastname"
+                                           required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <input type="text" class="form-control" placeholder="Ingresa tu RUT/DNI" name="dni"
+                                           required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-flag"></i></span>
+                                    <select class="form-control" name="nacionalidad" placeholder="Seleccione Nacionalidad" style="text-transform: capitalize">
+                                        <option value="afgano">afgano</option>
+                                        <option value="albano">albano</option>
+                                        <option value="alemán">alemán</option>
+                                        <option value="americano">americano</option>
+                                        <option value="andorrano">andorrano</option>
+                                        <option value="angolano">angolano</option>
+                                        <option value="antiguano">antiguano</option>
+                                        <option value="argelino">argelino</option>
+                                        <option value="argentino">argentino</option>
+                                        <option value="armenio">armenio</option>
+                                        <option value="australiano">australiano</option>
+                                        <option value="austriaco">austriaco</option>
+                                        <option value="azerbaiyano">azerbaiyano</option>
+                                        <option value="bahameño">bahameño</option>
+                                        <option value="bangladesí">bangladesí</option>
+                                        <option value="barbadense">barbadense</option>
+                                        <option value="bareiní">bareiní</option>
+                                        <option value="belga">belga</option>
+                                        <option value="beliceño">beliceño</option>
+                                        <option value="beninés">beninés</option>
+                                        <option value="bieloruso">bieloruso</option>
+                                        <option value="birmano">birmano</option>
+                                        <option value="boliviano">boliviano</option>
+                                        <option value="bosnio">bosnio</option>
+                                        <option value="botsuano">botsuano</option>
+                                        <option value="brasileño">brasileño</option>
+                                        <option value="británico">británico</option>
+                                        <option value="bruneano">bruneano</option>
+                                        <option value="búlgaro">búlgaro</option>
+                                        <option value="burkinés">burkinés</option>
+                                        <option value="burundés">burundés</option>
+                                        <option value="caboverdiano">caboverdiano</option>
+                                        <option value="camboyano">camboyano</option>
+                                        <option value="camerunés">camerunés</option>
+                                        <option value="canadiense">canadiense</option>
+                                        <option value="catarí">catarí</option>
+                                        <option value="ceilandés">ceilandés</option>
+                                        <option value="centroafricano">centroafricano</option>
+                                        <option value="chadiano">chadiano</option>
+                                        <option value="checo">checo</option>
+                                        <option value="chileno">chileno</option>
+                                        <option value="chino">chino</option>
+                                        <option value="chipriota">chipriota</option>
+                                        <option value="colombiano">colombiano</option>
+                                        <option value="comorense">comorense</option>
+                                        <option value="congoleño">congoleño</option>
+                                        <option value="costarricense">costarricense</option>
+                                        <option value="croata">croata</option>
+                                        <option value="cubano">cubano</option>
+                                        <option value="danés">danés</option>
+                                        <option value="dominicano">dominicano</option>
+                                        <option value="dominiqués">dominiqués</option>
+                                        <option value="ecuatoriano">ecuatoriano</option>
+                                        <option value="egipcio">egipcio</option>
+                                        <option value="eritreo">eritreo</option>
+                                        <option value="eslovaco">eslovaco</option>
+                                        <option value="esloveno">esloveno</option>
+                                        <option value="español">español</option>
+                                        <option value="estonio">estonio</option>
+                                        <option value="etíope">etíope</option>
+                                        <option value="filipino">filipino</option>
+                                        <option value="finés">finés</option>
+                                        <option value="francés">francés</option>
+                                        <option value="gabonés">gabonés</option>
+                                        <option value="gambiano">gambiano</option>
+                                        <option value="georgiano">georgiano</option>
+                                        <option value="ghanés">ghanés</option>
+                                        <option value="granadino">granadino</option>
+                                        <option value="greco-chipriota">greco-chipriota</option>
+                                        <option value="griego">griego</option>
+                                        <option value="groenlandés">groenlandés</option>
+                                        <option value="guatemalteco">guatemalteco</option>
+                                        <option value="guayanés">guayanés</option>
+                                        <option value="guineano">guineano</option>
+                                        <option value="Guineano">Guineano</option>
+                                        <option value="guineano">guineano</option>
+                                        <option value="haitiano">haitiano</option>
+                                        <option value="holandés">holandés</option>
+                                        <option value="hondureño">hondureño</option>
+                                        <option value="húngaro">húngaro</option>
+                                        <option value="indio">indio</option>
+                                        <option value="indionisio">indionisio</option>
+                                        <option value="iraní">iraní</option>
+                                        <option value="iraquí">iraquí</option>
+                                        <option value="irlandés">irlandés</option>
+                                        <option value="islandés">islandés</option>
+                                        <option value="israelí">israelí</option>
+                                        <option value="italiano">italiano</option>
+                                        <option value="jamaicano">jamaicano</option>
+                                        <option value="japonés">japonés</option>
+                                        <option value="jordano">jordano</option>
+                                        <option value="kazajo">kazajo</option>
+                                        <option value="keniata">keniata</option>
+                                        <option value="kirguís">kirguís</option>
+                                        <option value="kiribatiano">kiribatiano</option>
+                                        <option value="kuwaití">kuwaití</option>
+                                        <option value="laosiano">laosiano</option>
+                                        <option value="lesotense">lesotense</option>
+                                        <option value="letonio">letonio</option>
+                                        <option value="libanés">libanés</option>
+                                        <option value="liberiano">liberiano</option>
+                                        <option value="libio">libio</option>
+                                        <option value="liechtensteiniano">liechtensteiniano</option>
+                                        <option value="lituano">lituano</option>
+                                        <option value="luxemburgés">luxemburgés</option>
+                                        <option value="macedonio">macedonio</option>
+                                        <option value="malauí">malauí</option>
+                                        <option value="malayo">malayo</option>
+                                        <option value="maldivo">maldivo</option>
+                                        <option value="malgache">malgache</option>
+                                        <option value="maliense">maliense</option>
+                                        <option value="maltés">maltés</option>
+                                        <option value="marfileño">marfileño</option>
+                                        <option value="marroquí">marroquí</option>
+                                        <option value="marshalés">marshalés</option>
+                                        <option value="mauriciano">mauriciano</option>
+                                        <option value="mauritano">mauritano</option>
+                                        <option value="mexicano">mexicano</option>
+                                        <option value="moldavo">moldavo</option>
+                                        <option value="monaqués">monaqués</option>
+                                        <option value="mongól">mongól</option>
+                                        <option value="montenegrino">montenegrino</option>
+                                        <option value="mozambiqueño">mozambiqueño</option>
+                                        <option value="namibio">namibio</option>
+                                        <option value="nauruano">nauruano</option>
+                                        <option value="neozelandés">neozelandés</option>
+                                        <option value="nicaraguense">nicaraguense</option>
+                                        <option value="nigeriano">nigeriano</option>
+                                        <option value="niuano">niuano</option>
+                                        <option value="norcoreano">norcoreano</option>
+                                        <option value="noruego">noruego</option>
+                                        <option value="omanés">omanés</option>
+                                        <option value="pakistaní">pakistaní</option>
+                                        <option value="panameño">panameño</option>
+                                        <option value="papú">papú</option>
+                                        <option value="paraguayo">paraguayo</option>
+                                        <option value="peruano">peruano</option>
+                                        <option value="polaco">polaco</option>
+                                        <option value="portugués">portugués</option>
+                                        <option value="ruandés">ruandés</option>
+                                        <option value="rumano">rumano</option>
+                                        <option value="ruso">ruso</option>
+                                        <option value="salomonense">salomonense</option>
+                                        <option value="salvadoreño">salvadoreño</option>
+                                        <option value="samoano">samoano</option>
+                                        <option value="sanmarinense">sanmarinense</option>
+                                        <option value="sanvicentino">sanvicentino</option>
+                                        <option value="saudí">saudí</option>
+                                        <option value="senegalés">senegalés</option>
+                                        <option value="serbio">serbio</option>
+                                        <option value="seychelense">seychelense</option>
+                                        <option value="sierraleonés">sierraleonés</option>
+                                        <option value="singapurense">singapurense</option>
+                                        <option value="sirio">sirio</option>
+                                        <option value="somalí">somalí</option>
+                                        <option value="suazi">suazi</option>
+                                        <option value="sudafricano">sudafricano</option>
+                                        <option value="sudanés">sudanés</option>
+                                        <option value="sueco">sueco</option>
+                                        <option value="suizo">suizo</option>
+                                        <option value="surcoreano">surcoreano</option>
+                                        <option value="surinamés">surinamés</option>
+                                        <option value="tailandés">tailandés</option>
+                                        <option value="tanzano">tanzano</option>
+                                        <option value="timorense">timorense</option>
+                                        <option value="togolés">togolés</option>
+                                        <option value="tongano">tongano</option>
+                                        <option value="tunecino">tunecino</option>
+                                        <option value="turco">turco</option>
+                                        <option value="tuvaluano">tuvaluano</option>
+                                        <option value="ucraniano">ucraniano</option>
+                                        <option value="ugandés">ugandés</option>
+                                        <option value="uruguayo">uruguayo</option>
+                                        <option value="uzbeco">uzbeco</option>
+                                        <option value="vanuatuense">vanuatuense</option>
+                                        <option value="vaticano">vaticano</option>
+                                        <option value="venezolano">venezolano</option>
+                                        <option value="vietnamita">vietnamita</option>
+                                        <option value="yemení">yemení</option>
+                                        <option value="zambiano">zambiano</option>
+                                        <option value="zimbabuense">zimbabuense</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
+                                    <input type="text" class="form-control" placeholder="Ingresa tu Email" name="email"
+                                           required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                                    <input type="text" class="form-control" placeholder="Ingresa tu teléfono"
+                                           name="phone" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    <select class="form-control" name="planificacion" id="planificacion" placeholder="Seleccione Planificacion">
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-users"></i></span>
+                                    <input type="number" class="form-control" placeholder="Ingrese cantidad" min="1" name="cantidad"
+                                           required>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <input type="submit" name="submit" class="booking btn btn-primary"
+                                       value='Reservar Ahora'>
+                            </div>
+
+                        </form>
+                    </div><!--end sidebar-item-->
+
+                </div><!--end sidebar-->
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--end main-content-->
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-5">
+                <div class="text-left">
+                    <ul>
+                        <li><a href="https://www.facebook.com/privatourchile/" target="_blank"><i
+                                class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/privatourchile/" target="_blank"><i
+                                class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-7">
+                <div class="text-right">
+                    <p>&copy; Copyright 2018. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bact to top Section-->
+<div class="back-top">
+    <a href="#"><i class="fa fa-angle-up"></i></a>
+</div>
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/jquery.mixitup.min.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/waypoints.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="js/jquery.stellar.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+<script type="text/javascript"
+        src="https://maps.google.com/maps/api/js?js?sensor=false&key=AIzaSyCYI9QbpcEgmUSfnoBplXycjesknwlFW-w"></script>
+<script src="js/gmap3.min.js"></script>
+<script type="text/javascript" src="js/switcher.js"></script>
+<script src="js/script.js"></script>
+<script>
+    function findGetParameter(parameterName) {
+        var result = null,
+            tmp = [];
+        location.search
+            .substr(1)
+            .split("&")
+            .forEach(function (item) {
+                tmp = item.split("=");
+                if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+            });
+        return result;
+    }
+
+    $(document).on('ready', function () {
+        var idTour = parseInt(findGetParameter('tour'));
+        $.post('https://api.privatourchile.com/', {op: 'getTours'}, function (data) {
+            $.each(data.tours, function (i, tour) {
+                if (idTour == tour.tour_id) {
+                    $('#post_desc').html(tour.tour_descripcion_corta);
+                    $('#post_title1').html(tour.tour_nombre);
+                    $('#post_title').html(tour.tour_nombre);
+                    $('#post_thumb').html('<img src="tours/' + tour.tour_id + '_1.jpg"  alt=""/>');
+                    $('#post_price').val(tour.tour_precio);
+                    $('#post_id').val(tour.tour_id);
+                }
+            })
+        }, 'json');
+        $.post('https://api.privatourchile.com/', {op: 'getPlanificacion', idTour: idTour}, function (data) {
+            console.log(data.planificaciones);
+            $.each(data.planificaciones, function (i, tour) {
+                if (idTour == tour.tour_id) {
+                    $('#planificacion').append("<option value='"+ tour.planificacion_id+"'>"+ tour.planificacion_fecha + " " + tour.planificacion_hora + "</option>" )
+                }
+            })
+        }, 'json');
+        $.post('https://api.privatourchile.com/', {op: 'getItinerarios'}, function (data) {
+            console.log(data.itinerarios);
+            var j = 1;
+            $.each(data.itinerarios, function (i, tour) {
+                if (idTour == tour.tour_id) {
+                    $('#post_itinerario').append("<h3>" + j + " " + tour.itinerario_nombre + "</h3>" +tour.itinerario_descripcion_larga )
+                    j++;
+                }
+            })
+        }, 'json');
+
+        $.post('https://api.privatourchile.com/', {op: 'getComments'}, function (data) {
+            console.log(data.comments);
+            $.each(data.comments, function (i, tour) {
+                var estrellitas = "";
+                for( i = 0; i < 5; i++) {
+                    if( i < parseInt(tour.valoracion)) {
+                        estrellitas += "<i class='fa fa-star' style='color: #FDD835'></i>";
+                    }
+                    else {
+                        estrellitas += "<i class='fa fa-star' style='color: #E0E0E0'></i>";
+                    }
+                }
+                if (parseInt(idTour) == parseInt(tour.tour)) {
+                    $('#post_comments').append("<h5 style='font-size: 20px'>" + tour.turista + " "+ estrellitas + "</h5>" + tour.comment + "<br>")
+                }
+            })
+        }, 'json');
+        $('#btnComentar').on('click', function() {
+            var comment = $('#cComenario').val();
+            var autor= $('#cNombre').val();
+            var valoracion = $('#cValoracion').val();
+
+            if(comment == "" || autor == "" || valoracion == "") {
+                alert('Falta completar campos');
+            }
+            else {
+                var payload = {
+                    op: 'saveComment',
+                    comment: comment,
+                    autor: autor,
+                    valoracion: valoracion,
+                    tour: idTour
+                }
+                $.post('https://api.privatourchile.com/', payload, function (data) {
+                    alert('Gracias por su comentario');
+                    location.reload();
+                }, 'json');
+            }
+
+        });
+    })
+
+</script>
+</body>
+</html>
